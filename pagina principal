@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Imágenes Aleatorias</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+    margin-top:40px;
+}
+
+button{
+    padding:15px 30px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+img{
+    margin-top:20px;
+    max-width:90%;
+    max-height:700px;
+    border-radius:10px;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Galería Aleatoria</h1>
+
+<button onclick="mostrarImagen()">
+Mostrar Imagen Aleatoria
+</button>
+
+<br>
+
+<img id="imagen" src="" alt="">
+
+<script>
+
+const imagenes = [
+    "imagenes/foto1.jpg",
+    "imagenes/foto2.jpg",
+    "imagenes/foto3.jpg",
+    "imagenes/foto4.jpg",
+    "imagenes/foto5.jpg"
+];
+
+function mostrarImagen(){
+    const indice = Math.floor(Math.random() * imagenes.length);
+    document.getElementById("imagen").src = imagenes[indice];
+}
+
+</script>
+
+</body>
+</html>
